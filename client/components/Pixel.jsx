@@ -2,6 +2,9 @@ import React from 'react'
 
 
 class Pixel extends React.Component {
+    constructor() {
+        super()
+    }
     state = {
         style: {
             height: '100px',
@@ -16,7 +19,6 @@ class Pixel extends React.Component {
         )
     }
 }
-
 
 // const Pixel = () => {
 //     return (
