@@ -2,9 +2,13 @@ import React from 'react'
 import Pixel from './Pixel.jsx'
 
 const App = () => {
+  const arr = Array(400).fill(0)
   return (
     <>
-      <Pixel />
+      {arr.map((x, idx) => {
+        return <Pixel key={idx}/>
+      })
+      }
     </>
   )
 }
