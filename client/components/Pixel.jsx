@@ -3,8 +3,8 @@ import React from 'react'
 const Pixel = () => {
     return (
         <div style = {{
-            height: '10px',
-            width: '10px',
+            height: '100px',
+            width: '100px',
             backgroundColor: 'blue'
         }}>
 
