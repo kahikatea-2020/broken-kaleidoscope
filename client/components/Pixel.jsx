@@ -2,8 +2,13 @@ import React from 'react'
 
 const Pixel = () => {
   return (
-    <div>Test Div</div>
+    <div style = {{
+      backgroundColor: 'chartreuse',
+      height: '50px',
+      width: '50px'
+    }}
+    ></div>
   )
 }
 
-export default
+export default Pixel
