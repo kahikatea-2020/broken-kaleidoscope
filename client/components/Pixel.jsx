@@ -1,9 +1,14 @@
 import React from 'react'
 
-class Pixel extends React.Component{
+class Pixel extends React.Component {
   render() {
     return (
-      <div></div>
+      <div style={{
+        height: 20,
+        width: 20,
+        backgroundColor: 'cornflowerblue'
+      }}>
+      </div>
     )
   }
 }
