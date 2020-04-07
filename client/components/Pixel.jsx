@@ -37,12 +37,52 @@ changeGreen = (event) => {
     style
   })
 }
+
+changeBlack = (event) => {
+  const style = {
+    height: 20,
+    width: 20,
+    backgroundColor: 'black'
+  }
+  this.setState({
+    style
+  })
+}
+
+
+changeWhite = (event) => {
+  const style = {
+    height: 20,
+    width: 20,
+    backgroundColor: 'white'
+  }
+  this.setState({
+    style
+  })
+}
+
+changeYellow = (event) => {
+  const style = {
+    height: 20,
+    width: 20,
+    backgroundColor: 'yellow'
+  }
+  this.setState({
+    style
+  })
+}
+
+
+
   
   render() {
     return (
       <div 
         onClick={this.changeColour} 
         onMouseEnter={this.changeGreen}
+        onContextMenu={this.changeBlack}
+        onDoubleClick={this.changeWhite}
+        onDragEnter={this.changeYellow}
         style ={this.state.style}>
       </div>
     )
