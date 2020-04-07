@@ -1,8 +1,9 @@
 import React from "react";
 import Pixel from "./Pixel";
+import { v4 as uuidv4 } from "uuid";
 
 const generateBoxes = (num) =>
-  Array.from({ length: num }, (v, i) => <Pixel key={i} />);
+  Array.from({ length: num }, (v, i) => <Pixel key={uuidv4()} />);
 
 class App extends React.Component {
   state = {
@@ -11,8 +12,8 @@ class App extends React.Component {
 
   componentDidMount() {
     setInterval(() => {
-      window.location.reload(false);
-    }, 2000);
+      this.setState({ boxes: generateBoxes(950) });
+    }, 1000);
   }
 
   render() {
