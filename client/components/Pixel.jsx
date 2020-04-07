@@ -6,8 +6,8 @@ class Pixel extends React.Component {
 
     this.state = {
       style: {
-        height: '5em',
-        width: '5em',
+        height: '5px',
+        width: '5px',
         backgroundColor: this.randomHexColor()
       }
     }
@@ -19,8 +19,8 @@ class Pixel extends React.Component {
   changeToRandom = evt => {
     this.setState({
       style: {
-        height: '5em',
-        width: '5em',
+        height: '5px',
+        width: '5px',
         backgroundColor: this.randomHexColor()
       }
     })
@@ -29,8 +29,8 @@ class Pixel extends React.Component {
   changeToGreen = evt => {
     this.setState({
       style: {
-        height: '5em',
-        width: '5em',
+        height: '5px',
+        width: '5px',
         backgroundColor: 'green'
       }
     })
@@ -40,8 +40,8 @@ class Pixel extends React.Component {
     evt.preventDefault()
     this.setState({
       style: {
-        height: '5em',
-        width: '5em',
+        height: '5px',
+        width: '5px',
         backgroundColor: 'black'
       }
     })
@@ -50,8 +50,8 @@ class Pixel extends React.Component {
   changeToWhite = evt => {
     this.setState({
       style: {
-        height: '5em',
-        width: '5em',
+        height: '5px',
+        width: '5px',
         backgroundColor: 'white'
       }
     })
@@ -60,8 +60,8 @@ class Pixel extends React.Component {
   changeToYellow = evt => {
     this.setState({
       style: {
-        height: '5em',
-        width: '5em',
+        height: '5px',
+        width: '5px',
         backgroundColor: 'yellow'
       }
     })
