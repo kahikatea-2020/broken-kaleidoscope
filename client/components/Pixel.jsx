@@ -16,7 +16,7 @@ class Pixel extends React.Component {
   randomHexColor = () =>
     `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
-  clickHandler = evt => {
+  changeToRandom = evt => {
     this.setState({
       style: {
         height: '5em',
@@ -26,10 +26,25 @@ class Pixel extends React.Component {
     })
   }
 
+  changeToGreen = evt => {
+    this.setState({
+      style: {
+        height: '5em',
+        width: '5em',
+        backgroundColor: 'green'
+      }
+    })
+  }
+
   render () {
     return (
       <>
-        <div onClick={this.clickHandler} style={this.state.style}></div>
+        <div
+          style={this.state.style}
+          onClick={this.changeToRandom}
+          onMouseEnter={this.changeToGreen}
+        >
+        </div>
       </>
     )
   }
