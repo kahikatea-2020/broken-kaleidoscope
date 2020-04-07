@@ -30,9 +30,9 @@ class Pixel extends React.Component {
     return (
       <>
         <div id="kaleidoscope">
-          <div id="clickable" style={{
-            height: this.state.style.height, width: this.state.style.width, backgroundColor: this.state.style.color
-          }} onClick={this.clickHandler}></div>
+          <div id="clickable" style={
+            this.state.style}
+            onClick={this.clickHandler}></div>
         </div>
 
       </>
