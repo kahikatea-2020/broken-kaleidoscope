@@ -8,21 +8,17 @@ class Pixel extends React.Component{
   state = {
     style:{
       backgroundColor: randomHexColor(),
-      width: '50px',
-      height: '50px',
-      borderRadius: '15px',
-      margin: '2px',
+      width: '8px',
+      height: '8px',
+      borderRadius: '2px',
       }
   }
 
  clickHandler = evt => {
    this.setState({
      style:{
+      ...this.state.style,
       backgroundColor: randomHexColor(),
-      width: '50px',
-      height: '50px',
-      borderRadius: '15px',
-      margin: '2px',
      }
    })
  }
@@ -61,7 +57,6 @@ class Pixel extends React.Component{
           onMouseEnter={this.mouseEnter}
           onDoubleClick={this.doubleClick}
           onDragEnter={this.dragEnter}
-
           >
       </div>
     )
