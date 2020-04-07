@@ -3,20 +3,7 @@ import React from 'react'
 import Pixel from './Pixel'
 
 const App = () => {
-  return (
-    <>
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-    </>
-  )
+  return Array.from({ length: 100000 }, (pixel, i) => <Pixel key={i}/>)
 }
 
 export default App

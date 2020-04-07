@@ -2,6 +2,8 @@ import React from 'react'
 
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+const height = 3
+const width = 3
 
 class Pixel extends React.Component {
   constructor (props) {
@@ -9,8 +11,8 @@ class Pixel extends React.Component {
 
     this.state = {
       style: {
-        height: 20,
-        width: 20,
+        height,
+        width,
         backgroundColor: randomHexColor()
       }
     }
@@ -18,8 +20,8 @@ class Pixel extends React.Component {
 
   changeColour = (event) => {
     const style = {
-      height: 20,
-      width: 20,
+      height,
+      width,
       backgroundColor: randomHexColor()
     }
     this.setState({
@@ -29,8 +31,8 @@ class Pixel extends React.Component {
 
   changeGreen = (event) => {
     const style = {
-      height: 20,
-      width: 20,
+      height,
+      width,
       backgroundColor: 'green'
     }
     this.setState({
@@ -41,8 +43,8 @@ class Pixel extends React.Component {
   changeBlack = (event) => {
     event.preventDefault()
     const style = {
-      height: 20,
-      width: 20,
+      height,
+      width,
       backgroundColor: 'black'
     }
     this.setState({
@@ -52,8 +54,8 @@ class Pixel extends React.Component {
 
   changeWhite = (event) => {
     const style = {
-      height: 20,
-      width: 20,
+      height,
+      width,
       backgroundColor: 'white'
     }
     this.setState({
@@ -63,8 +65,8 @@ class Pixel extends React.Component {
 
   changeYellow = (event) => {
     const style = {
-      height: 20,
-      width: 20,
+      height,
+      width,
       backgroundColor: 'yellow'
     }
     this.setState({
