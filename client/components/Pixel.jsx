@@ -11,6 +11,8 @@ class Pixel extends React.Component {
         backgroundColor: this.randomHexColor()
       }
     }
+
+    setInterval(this.changeToRandom, 2000)
   }
 
   randomHexColor = () =>
@@ -19,8 +21,8 @@ class Pixel extends React.Component {
   changeToRandom = evt => {
     this.setState({
       style: {
-        height: '5px',
-        width: '5px',
+        height: '10px',
+        width: '10px',
         backgroundColor: this.randomHexColor()
       }
     })
@@ -29,8 +31,8 @@ class Pixel extends React.Component {
   changeToGreen = evt => {
     this.setState({
       style: {
-        height: '5px',
-        width: '5px',
+        height: '10px',
+        width: '10px',
         backgroundColor: 'green'
       }
     })
@@ -40,8 +42,8 @@ class Pixel extends React.Component {
     evt.preventDefault()
     this.setState({
       style: {
-        height: '5px',
-        width: '5px',
+        height: '10px',
+        width: '10px',
         backgroundColor: 'black'
       }
     })
@@ -50,8 +52,8 @@ class Pixel extends React.Component {
   changeToWhite = evt => {
     this.setState({
       style: {
-        height: '5px',
-        width: '5px',
+        height: '10px',
+        width: '10px',
         backgroundColor: 'white'
       }
     })
@@ -60,12 +62,23 @@ class Pixel extends React.Component {
   changeToYellow = evt => {
     this.setState({
       style: {
-        height: '5px',
-        width: '5px',
+        height: '10px',
+        width: '10px',
         backgroundColor: 'yellow'
       }
     })
   }
+
+  // changeTwoSeconds = () => {
+  //   setInterval(this.changeToRandom(), 2000)
+  // }
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     console.log('This will run every second!');
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   render () {
     return (
