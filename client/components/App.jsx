@@ -1,33 +1,24 @@
-import React from 'react'
-import Pixel from './Pixel'
+import React from "react";
+import Pixel from "./Pixel";
 
 const generateBoxes = (num) => {
-let array= []
+  let array = [];
   for (var i = 0; i < num; i++) {
-  array.push(<Pixel key={i} />
-)}
-return array
-}
-
-const Boxes = [
-  <Pixel />,
-  <Pixel />,
-  <Pixel />,
-  <Pixel />,
-  <Pixel />,
-  <Pixel />,
-  <Pixel />,
-  <Pixel />,
-  <Pixel />,
-  <Pixel />
-]
+    array.push(<Pixel key={i} />);
+  }
+  return array;
+};
 
 const App = () => {
   return (
-    <div>
-   {generateBoxes(10000)}
-    </div>
-  )
-}
+    <>
+      <div>{generateBoxes(950)}</div>
+      <div>{generateBoxes(950)}</div>
+      <div>{generateBoxes(950)}</div>
+      <div>{generateBoxes(950)}</div>
+      <div>{generateBoxes(950)}</div>
+    </>
+  );
+};
 
-export default App
+export default App;
