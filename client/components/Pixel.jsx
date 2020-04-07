@@ -2,8 +2,8 @@ import React from 'react'
 
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
-const height = 3
-const width = 3
+const height = 20
+const width = 20
 
 class Pixel extends React.Component {
   constructor (props) {
@@ -16,6 +16,7 @@ class Pixel extends React.Component {
         backgroundColor: randomHexColor()
       }
     }
+    setInterval(this.changeColour, 2000)
   }
 
   changeColour = (event) => {
