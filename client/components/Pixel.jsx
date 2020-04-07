@@ -10,16 +10,16 @@ class Pixel extends React.Component {
     }
     state = {
         style: {
-            height: '100px',
-            width: '100px',
+            height: '20px',
+            width: '20px',
             backgroundColor: randomHexColor()
         }
     }
     clickHandler = evt => {
         this.setState({
             style: {
-                height: '100px',
-                width: '100px',
+                height: '20px',
+                width: '20px',
                 backgroundColor: randomHexColor()
             }
         })
@@ -28,8 +28,8 @@ class Pixel extends React.Component {
     mouseOver = evt => {
         this.setState({
             style: {
-                height: '100px',
-                width: '100px',
+                height: '20px',
+                width: '20px',
                 backgroundColor: 'green'
             }
         })
@@ -39,8 +39,8 @@ class Pixel extends React.Component {
         evt.preventDefault()
         this.setState({
             style: {
-                height: '100px',
-                width: '100px',
+                height: '20px',
+                width: '20px',
                 backgroundColor: 'black'
             }
         })
@@ -49,8 +49,8 @@ class Pixel extends React.Component {
     dblClick = evt => {
         this.setState({
             style: {
-                height: '100px',
-                width: '100px',
+                height: '20px',
+                width: '20px',
                 backgroundColor: 'white'
             }
         })
@@ -59,12 +59,15 @@ class Pixel extends React.Component {
     drag = evt => {
         this.setState({
             style: {
-                height: '100px',
-                width: '100px',
+                height: '20px',
+                width: '20px',
                 backgroundColor: 'yellow'
             }
         })
     }
+
+
+
 
 render() {
     return (
@@ -75,6 +78,7 @@ render() {
             onContextMenu={this.rightClick}
             onDoubleClick={this.dblClick}
             onDragEnter={this.drag}
+        
         >
 
         </div>
