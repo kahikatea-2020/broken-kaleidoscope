@@ -57,6 +57,16 @@ class Pixel extends React.Component {
     })
   }
 
+  changeToYellow = evt => {
+    this.setState({
+      style: {
+        height: '5em',
+        width: '5em',
+        backgroundColor: 'yellow'
+      }
+    })
+  }
+
   render () {
     return (
       <>
@@ -66,6 +76,7 @@ class Pixel extends React.Component {
           onMouseEnter={this.changeToGreen}
           onContextMenu={this.changeToBlack}
           onDoubleClick={this.changeToWhite}
+          onDragEnter={this.changeToYellow}
         >
         </div>
       </>
