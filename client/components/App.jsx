@@ -9,16 +9,28 @@ const generateBoxes = (num) => {
   return array;
 };
 
-const App = () => {
-  return (
-    <>
-      <div>{generateBoxes(950)}</div>
-      <div>{generateBoxes(950)}</div>
-      <div>{generateBoxes(950)}</div>
-      <div>{generateBoxes(950)}</div>
-      <div>{generateBoxes(950)}</div>
-    </>
-  );
-};
+class App extends React.Component {
+  state = {
+    boxes: generateBoxes(950),
+  };
+
+  componentDidMount() {
+    setInterval(() => {
+      window.location.reload(false);
+    }, 2000);
+  }
+
+  render() {
+    return (
+      <div>
+        <div>{this.state.boxes}</div>
+        <div>{this.state.boxes}</div>
+        <div>{this.state.boxes}</div>
+        <div>{this.state.boxes}</div>
+        <div>{this.state.boxes}</div>
+      </div>
+    );
+  }
+}
 
 export default App;
