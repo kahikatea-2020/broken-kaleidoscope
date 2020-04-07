@@ -22,7 +22,17 @@ changeColour = (event) => {
     width: 20,
     backgroundColor: randomHexColor()
   }
-  
+  this.setState({
+    style
+  })
+}
+
+changeGreen = (event) => {
+  const style = {
+    height: 20,
+    width: 20,
+    backgroundColor: 'green'
+  }
   this.setState({
     style
   })
@@ -30,7 +40,10 @@ changeColour = (event) => {
   
   render() {
     return (
-      <div onClick={this.changeColour} style ={this.state.style}>
+      <div 
+        onClick={this.changeColour} 
+        onMouseEnter={this.changeGreen}
+        style ={this.state.style}>
       </div>
     )
   }
