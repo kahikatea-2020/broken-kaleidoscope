@@ -7,25 +7,45 @@ const randomHexColor = () =>
 
 class Pixel extends React.Component {
   state = {
-    style: {
-      height: "20px",
-      width: "20px",
-      backgroundColor: randomHexColor(),
-    },
+    backgroundColor: randomHexColor(),
   };
 
   handleClick = () => {
-    this.setState({
-      style: {
-        height: "20px",
-        width: "20px",
-        backgroundColor: randomHexColor(),
-      },
-    });
+    this.setState({ backgroundColor: randomHexColor() });
+  };
+
+  handleMouseEnter = (e) => {
+    this.setState({ backgroundColor: "green" });
+  };
+
+  handleContextMenu = (e) => {
+    e.preventDefault();
+    this.setState({ backgroundColor: "black" });
+  };
+
+  handleDoubleClick = (e) => {
+    this.setState({ backgroundColor: "white" });
+  };
+
+  handleDrageEnter = () => {
+    this.setState({ backgroundColor: "yellow" });
   };
 
   render() {
-    return <div onClick={this.handleClick} style={this.state.style}></div>;
+    return (
+      <div
+        onClick={this.handleClick}
+        onMouseEnter={this.handleMouseEnter}
+        onContextMenu={this.handleContextMenu}
+        onDoubleClick={this.handleDoubleClick}
+        onDragEnter={this.handleDrageEnter}
+        style={{
+          height: "70px",
+          width: "70px",
+          backgroundColor: this.state.backgroundColor,
+        }}
+      ></div>
+    );
   }
 }
 

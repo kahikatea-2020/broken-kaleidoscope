@@ -1,13 +1,8 @@
 import React from "react";
 import Pixel from "./Pixel";
 
-const generateBoxes = (num) => {
-  let array = [];
-  for (var i = 0; i < num; i++) {
-    array.push(<Pixel key={i} />);
-  }
-  return array;
-};
+const generateBoxes = (num) =>
+  Array.from({ length: num }, (v, i) => <Pixel key={i} />);
 
 class App extends React.Component {
   state = {
@@ -21,15 +16,7 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <div>{this.state.boxes}</div>
-        <div>{this.state.boxes}</div>
-        <div>{this.state.boxes}</div>
-        <div>{this.state.boxes}</div>
-        <div>{this.state.boxes}</div>
-      </div>
-    );
+    return <div>{this.state.boxes}</div>;
   }
 }
 
