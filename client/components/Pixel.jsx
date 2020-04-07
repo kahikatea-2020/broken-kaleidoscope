@@ -4,7 +4,7 @@ const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
 class Pixel extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -16,74 +16,71 @@ class Pixel extends React.Component {
     }
   }
 
-changeColour = (event) => {
-  const style = {
-    height: 20,
-    width: 20,
-    backgroundColor: randomHexColor()
+  changeColour = (event) => {
+    const style = {
+      height: 20,
+      width: 20,
+      backgroundColor: randomHexColor()
+    }
+    this.setState({
+      style
+    })
   }
-  this.setState({
-    style
-  })
-}
 
-changeGreen = (event) => {
-  const style = {
-    height: 20,
-    width: 20,
-    backgroundColor: 'green'
+  changeGreen = (event) => {
+    const style = {
+      height: 20,
+      width: 20,
+      backgroundColor: 'green'
+    }
+    this.setState({
+      style
+    })
   }
-  this.setState({
-    style
-  })
-}
 
-changeBlack = (event) => {
-  const style = {
-    height: 20,
-    width: 20,
-    backgroundColor: 'black'
+  changeBlack = (event) => {
+    event.preventDefault()
+    const style = {
+      height: 20,
+      width: 20,
+      backgroundColor: 'black'
+    }
+    this.setState({
+      style
+    })
   }
-  this.setState({
-    style
-  })
-}
 
-
-changeWhite = (event) => {
-  const style = {
-    height: 20,
-    width: 20,
-    backgroundColor: 'white'
+  changeWhite = (event) => {
+    const style = {
+      height: 20,
+      width: 20,
+      backgroundColor: 'white'
+    }
+    this.setState({
+      style
+    })
   }
-  this.setState({
-    style
-  })
-}
 
-changeYellow = (event) => {
-  const style = {
-    height: 20,
-    width: 20,
-    backgroundColor: 'yellow'
+  changeYellow = (event) => {
+    const style = {
+      height: 20,
+      width: 20,
+      backgroundColor: 'yellow'
+    }
+    this.setState({
+      style
+    })
   }
-  this.setState({
-    style
-  })
-}
 
-
-
-  
-  render() {
+  render () {
     return (
-      <div 
-        onClick={this.changeColour} 
+      <div
+        onClick={this.changeColour}
         onMouseEnter={this.changeGreen}
         onContextMenu={this.changeBlack}
         onDoubleClick={this.changeWhite}
         onDragEnter={this.changeYellow}
-        style ={this.state.style}>
+        style={this.state.style}>
       </div>
     )
   }

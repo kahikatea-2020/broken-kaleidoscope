@@ -7,8 +7,8 @@
   "author": "EDA",
   "license": "ISC",
   "scripts": {
-    "dev:client" : "webpack --watch",
-    "server" : "node server",
+    "dev:client": "webpack --watch",
+    "server": "node server",
     "start": "run-s webpack server",
     "dev": "run-p dev:client server",
     "test": "jest --watchAll"
