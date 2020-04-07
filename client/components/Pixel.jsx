@@ -7,6 +7,8 @@ const randomHexColor = () =>
 
 class Pixel extends React.Component {
   state = {
+    height: this.props.height,
+    width: this.props.width,
     backgroundColor: randomHexColor(),
   };
 
@@ -39,11 +41,7 @@ class Pixel extends React.Component {
         onContextMenu={this.handleContextMenu}
         onDoubleClick={this.handleDoubleClick}
         onDragEnter={this.handleDrageEnter}
-        style={{
-          height: "70px",
-          width: "70px",
-          backgroundColor: this.state.backgroundColor,
-        }}
+        style={this.state}
       ></div>
     );
   }
